@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" prefHeight="582.0" prefWidth="632.0" vgap="10" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="615.0" prefWidth="632.0">
+         <children>
+            <Button fx:id="passwordList" layoutX="99.0" layoutY="533.0" mnemonicParsing="false" onAction="#listPasswords" text="Passwörter Verwalten" />
+            <Label alignment="CENTER" layoutX="21.0" prefHeight="73.0" prefWidth="287.0" text="Password Manager" textFill="#011102" underline="true">
+               <font>
+                  <Font name="Sylfaen" size="27.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="letters" layoutX="106.0" layoutY="108.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="125.0" text="Buchstaben">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="numbers" layoutX="106.0" layoutY="140.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="97.0" text="Zahlen">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="special" layoutX="106.0" layoutY="174.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="136.0" text="Spezialzeichen">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </CheckBox>
+            <Button fx:id="generate" layoutX="114.0" layoutY="203.0" mnemonicParsing="false" onAction="#generatePass" text="Generiere!" textFill="#9e1414">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Slider fx:id="lengthSlider" layoutX="42.0" layoutY="281.0" majorTickUnit="10.0" minorTickCount="5" prefHeight="37.0" prefWidth="244.0" showTickLabels="true" showTickMarks="true" value="50.0" />
+            <Label alignment="CENTER" layoutX="125.0" layoutY="260.0" prefHeight="21.0" prefWidth="79.0" text="Länge">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="password" layoutX="179.0" layoutY="383.0" promptText="Passwort" />
+            <TextField fx:id="key" layoutX="179.0" layoutY="340.0" promptText="(bsp. FH-Dortmund)" />
+            <TextField fx:id="encryptKey" layoutX="179.0" layoutY="429.0" promptText="Sicherungsschlüssel" />
+            <Label fx:id="keyLabel" layoutX="22.0" layoutY="342.0" text="Name des Passwortes">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="passwordLabel" layoutX="79.0" layoutY="385.0" prefHeight="17.0" prefWidth="79.0" text="Passwort">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="encryptKeyLabel" layoutX="43.0" layoutY="431.0" text="Masterschlüssel">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="readPassword" layoutX="14.0" layoutY="489.0" mnemonicParsing="false" onAction="#getPassword" prefHeight="25.0" prefWidth="149.0" text="Passwort lesen" />
+            <Button fx:id="writeButton" layoutX="179.0" layoutY="489.0" mnemonicParsing="false" onAction="#writePassword" prefHeight="25.0" prefWidth="149.0" text="Passwort überschreiben" />
+            <ImageView fx:id="image" fitHeight="31.0" fitWidth="26.0" layoutX="152.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@lock.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</GridPane>
